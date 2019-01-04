@@ -1,0 +1,5 @@
+D:\Arminder\BlogService\BlogService
+--output-path=obj\Release\netcoreapp2.0\
+--application-name=BlogService
+--content-root=D:\Arminder\BlogService\BlogService
+--file=
