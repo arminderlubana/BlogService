@@ -13308,11 +13308,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Arminder\\personal\\BlogService\\BlogService\\BlogService\\BlogService.csproj",
+      "projectUniqueName": "D:\\BlogService\\BlogService\\BlogService.csproj",
       "projectName": "BlogService",
-      "projectPath": "D:\\Arminder\\personal\\BlogService\\BlogService\\BlogService\\BlogService.csproj",
+      "projectPath": "D:\\BlogService\\BlogService\\BlogService.csproj",
       "packagesPath": "C:\\Users\\arminder.singh\\.nuget\\packages\\",
-      "outputPath": "D:\\Arminder\\personal\\BlogService\\BlogService\\BlogService\\obj\\",
+      "outputPath": "D:\\BlogService\\BlogService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
