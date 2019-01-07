@@ -31,3 +31,14 @@ D:\Arminder\personal\BlogService\BlogService\BlogService\obj\Debug\netcoreapp2.0
 D:\Arminder\personal\BlogService\BlogService\BlogService\obj\Debug\netcoreapp2.0\BlogService.dll
 D:\Arminder\personal\BlogService\BlogService\BlogService\obj\Debug\netcoreapp2.0\BlogService.pdb
 D:\Arminder\personal\BlogService\BlogService\BlogService\obj\Debug\netcoreapp2.0\BlogService.csprojAssemblyReference.cache
+D:\BlogService\BlogService\bin\Debug\netcoreapp2.0\BlogService.deps.json
+D:\BlogService\BlogService\bin\Debug\netcoreapp2.0\BlogService.runtimeconfig.json
+D:\BlogService\BlogService\bin\Debug\netcoreapp2.0\BlogService.runtimeconfig.dev.json
+D:\BlogService\BlogService\bin\Debug\netcoreapp2.0\BlogService.dll
+D:\BlogService\BlogService\bin\Debug\netcoreapp2.0\BlogService.pdb
+D:\BlogService\BlogService\obj\Debug\netcoreapp2.0\BlogService.csprojAssemblyReference.cache
+D:\BlogService\BlogService\obj\Debug\netcoreapp2.0\BlogService.csproj.CoreCompileInputs.cache
+D:\BlogService\BlogService\obj\Debug\netcoreapp2.0\BlogService.AssemblyInfoInputs.cache
+D:\BlogService\BlogService\obj\Debug\netcoreapp2.0\BlogService.AssemblyInfo.cs
+D:\BlogService\BlogService\obj\Debug\netcoreapp2.0\BlogService.dll
+D:\BlogService\BlogService\obj\Debug\netcoreapp2.0\BlogService.pdb
