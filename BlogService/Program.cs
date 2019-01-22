@@ -17,7 +17,7 @@ namespace BlogService
                 var services = scope.ServiceProvider;
                 try
                 {
-                    var a;
+                   
                     var context = services.GetRequiredService<SchoolContext>();
                     DbInitializer.EnsureMigration<SchoolContext>(context);
                     DbInitializer.InitializeSchoolContext<SchoolContext>(context);
