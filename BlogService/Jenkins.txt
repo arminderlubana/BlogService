@@ -1,0 +1,41 @@
+﻿pipeline
+{
+     agent any
+    stages
+    {
+        stage('Checkout') {
+         steps {
+          git credentialsId: 'arminderlubana', url: 'https://github.com/arminderlubana/BlogService', branch: 'master'
+         }
+        }
+          stage('Clean') {
+           steps {
+            bat 'dotnet clean'
+           }
+          }
+          stage('Restore') {
+           steps {
+            bat 'dotnet restore'
+           }
+          }
+          stage('Build') {
+           steps {
+            bat 'dotnet build --no-restore --configuration Release'
+           }
+          }
+          stage('testing') {
+                            steps {
+                              bat 'dotnet test BlogService.TDD/BlogService.TDD.csproj --logger trx;LogFileName=results.trx'
+                            }
+          }
+          stage('Unit test'){
+                    def MSTest = tool 'MSTest14.0'
+                    dir('BlogService.TDD/BlogService.TDD/bin/Debug/netcoreapp2.1')
+                    {
+                        bat "${MSTest} /testcontainer:BlogService.TDD.dll /resultsfile:Results.trx"
+                    }
+                    step([$class: 'MSTestPublisher', testResultsFile:"**/*.trx", failOnError: true, keepLongStdio: true])
+                }
+         
+}
+}
