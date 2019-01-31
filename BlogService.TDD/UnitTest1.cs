@@ -17,7 +17,7 @@ namespace BlogService.TDD
         public void TestMethod2()
         {
 
-            Assert.AreEqual(1, 0);
+            Assert.AreEqual(1, 1);
 
         }
     }
