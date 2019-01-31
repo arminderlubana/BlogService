@@ -12,5 +12,13 @@ namespace BlogService.TDD
             Assert.AreEqual(1,1);
 
         }
+
+        [TestMethod]
+        public void TestMethod2()
+        {
+
+            Assert.AreEqual(1, 0);
+
+        }
     }
 }
