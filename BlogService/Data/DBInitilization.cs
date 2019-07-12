@@ -1,5 +1,7 @@
 ﻿using BlogService.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Linq;
 
@@ -9,7 +11,10 @@ namespace BlogService.Data
     {
         public static void EnsureMigration<T>(this DbContext context) where T : DbContext
         {
-            
+            // if(context.Database.EnsureCreated()){
+            //        RelationalDatabaseCreator edatabaseCreator = (RelationalDatabaseCreator)context.Database.GetService<IDatabaseCreator>();
+            //           edatabaseCreator.CreateTables();
+            // }
             context.Database.Migrate();
         }
 
@@ -59,7 +64,7 @@ namespace BlogService.Data
         public static void InitializeEmployeeContext<T>(this EmployeeContext context) where T : DbContext
         {
             #region Student
-            
+            //context.Database.
             // Look for any students.
             if (context.Employees.Any())
             {

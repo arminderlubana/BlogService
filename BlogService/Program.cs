@@ -1,6 +1,8 @@
 ﻿using BlogService.Data;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
@@ -18,10 +20,22 @@ namespace BlogService
                 try
                 {
                    
-                    var context = services.GetRequiredService<SchoolContext>();
-                    DbInitializer.EnsureMigration<SchoolContext>(context);
-                    DbInitializer.InitializeSchoolContext<SchoolContext>(context);
+                  //  var context = services.GetRequiredService<SchoolContext>();
+                    // if(context.Database.EnsureCreated()){
+                    //     RelationalDatabaseCreator databaseCreator = (RelationalDatabaseCreator)context.Database.GetService<IDatabaseCreator>();
+                    //  databaseCreator.CreateTables();
+
+                    // }
+                  //  DbInitializer.EnsureMigration<SchoolContext>(context);
+                  //  DbInitializer.InitializeSchoolContext<SchoolContext>(context);
                     var econtext = services.GetRequiredService<EmployeeContext>();
+                       // econtext.Database.EnsureCreated();
+
+                // if(econtext.Database.EnsureCreated()){
+                    //     RelationalDatabaseCreator edatabasecreator = (RelationalDatabaseCreator)econtext.Database.GetService<IDatabaseCreator>();
+                    //  edatabasecreator.CreateTables();
+                 //  }
+                    DbInitializer.EnsureMigration<EmployeeContext>(econtext);
                     DbInitializer.InitializeEmployeeContext<EmployeeContext>(econtext);
                 }
                 catch (Exception ex)

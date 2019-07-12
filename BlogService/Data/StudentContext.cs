@@ -12,6 +12,7 @@ namespace BlogService.Data
 
         public SchoolContext(DbContextOptions<SchoolContext> options) : base(options)
         {
+            
         }
 
         public DbSet<Student> Students { get; set; }

@@ -1,0 +1,4 @@
+From mcr.microsoft.com/mssql/server
+COPY student.mdf ./
+COPY student_log.ldf ./
+ENV attach_dbs="[{'dbName':'student','dbFiles': ['student.mdf','student_log.ldf']}]"

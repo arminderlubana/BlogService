@@ -2,6 +2,7 @@
 using BlogService.Filter.Exception;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -21,6 +22,8 @@ namespace BlogService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+             var connection = @"Server=db;Database=student123;User=sa;Password=arm!nder1;";
+
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAllHeaders",
@@ -39,9 +42,12 @@ namespace BlogService
             //    });
             //         });
             services.AddDbContext<SchoolContext>(options =>
-               options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+               options.UseSqlServer(connection));
             services.AddDbContext<EmployeeContext>(options =>
-               options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+               options.UseSqlServer(connection));
+        //        services.AddIdentity<ApplicationUser, IdentityRole>()
+        // .AddEntityFrameworkStores<ApplicationDbContext>()
+        // .AddDefaultTokenProviders();
             services.AddMvc(
                 config =>
                 {
