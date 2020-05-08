@@ -20,6 +20,7 @@ namespace BlogService.Controllers
         public EmployeesController(EmployeeContext context)
         {
             _context = context;
+            
         }
 
         // GET: api/Employees
